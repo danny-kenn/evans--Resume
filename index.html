@@ -403,11 +403,11 @@
     <script>
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent form's default action
-
+    
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries()); // Convert form data to object
-
-            fetch('http://localhost:3000/send-email', {
+    
+            fetch('https://evans-resume.vercel.app/api/send-email', { // Updated URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -430,7 +430,7 @@
                         backgroundColor: "#28a745", // Success color
                         close: true // Add close button
                     }).showToast();
-
+    
                     document.getElementById('contact-form').reset(); // Clear form fields
                 })
                 .catch(error => {
@@ -445,8 +445,7 @@
                     }).showToast();
                 });
         });
-
-
+    
         // Smooth Scrolling for Navbar Links
         const navbarLinks = document.querySelectorAll('.nav-link');
         navbarLinks.forEach(link => {
@@ -457,9 +456,8 @@
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-
     </script>
+    
 
 
     <!-- Back to Top Button -->
