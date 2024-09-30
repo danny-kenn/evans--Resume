@@ -16,10 +16,13 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER, // Email from .env
-        pass: process.env.EMAIL_PASS  // Password from .env
-    }
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    },
+    logger: true,  // Enable logging
+    debug: true    // Show debug output
 });
+
 
 // POST route to handle email sending
 app.post('/send-email', (req, res) => {
