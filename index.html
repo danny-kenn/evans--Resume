@@ -331,7 +331,7 @@
         </div>
     </section>
 
-   
+
     <!-- Contact Section with Input Form -->
     <!-- Include Font Awesome for icons (add this in the <head> section) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -403,11 +403,11 @@
     <script>
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent form's default action
-    
+
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries()); // Convert form data to object
-    
-            fetch('https://evans-resume.vercel.app/api/send-email', { // Updated URL
+
+            fetch('/api/send-email', { // Use the Vercel serverless function route
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -418,7 +418,7 @@
                     if (!response.ok) {
                         throw new Error('Failed to send message'); // Error handling for failed requests
                     }
-                    return response.text();
+                    return response.json(); // Parse the response as JSON
                 })
                 .then(data => {
                     // Show success toast notification
@@ -430,7 +430,7 @@
                         backgroundColor: "#28a745", // Success color
                         close: true // Add close button
                     }).showToast();
-    
+
                     document.getElementById('contact-form').reset(); // Clear form fields
                 })
                 .catch(error => {
@@ -445,7 +445,7 @@
                     }).showToast();
                 });
         });
-    
+
         // Smooth Scrolling for Navbar Links
         const navbarLinks = document.querySelectorAll('.nav-link');
         navbarLinks.forEach(link => {
@@ -457,7 +457,8 @@
             });
         });
     </script>
-    
+
+
 
 
     <!-- Back to Top Button -->
