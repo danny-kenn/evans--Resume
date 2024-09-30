@@ -219,6 +219,28 @@
 .navbar-nav {
     display: flex; /* Make nav items align horizontally */
 }
+.social-iconics {
+    font-size: 18px; /* Change this value to make icons smaller or larger */
+}
+
+@media (max-width: 768px) { /* Adjust for mobile view if needed */
+    .social-icon {
+        font-size: 16px; /* Smaller size for mobile, if desired */
+    }
+}
+.social-iconics {
+            font-size: 20px;
+            /* Icon size */
+            color: #f5f5f5;
+            /* Icon color */
+            text-decoration: none;
+        }
+
+        .social-iconics:hover {
+            color: #fa06d1;
+            /* Color on hover */
+        }
+
 
 
     </style>
@@ -229,18 +251,18 @@
     <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">Evans Ochieng</a>
-    <div class="d-flex justify-content-center w-45"></div>
+    <div class="d-flex justify-content-center w-0"></div>
         <div class="social-media-icons d-flex">
             <!-- Phone Icon -->
-            <a href="tel:+254794987153" class="social-icon mx-2" title="Phone">
+            <a href="tel:+254794987153" class="social-iconics mx-2" title="Phone">
                 <i class="fas fa-phone-alt"></i>
             </a>
             <!-- WhatsApp Icon -->
-            <a href="https://wa.me/254794987153" target="_blank" class="social-icon mx-2" title="WhatsApp">
+            <a href="https://wa.me/254794987153" target="_blank" class="social-iconics mx-2" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
             <!-- Email Icon -->
-            <a href="mailto:evochieng44@gmail.com" class="social-icon mx-2" title="Email">
+            <a href="mailto:evochieng44@gmail.com" class="social-iconics mx-2" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
