@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Evans Onyango - Economics Student</title>
+    <title>Evans Ochieng - Economics Student</title>
     <link rel="stylesheet" href="index_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -132,7 +132,7 @@
         }
 
         .social-icon:hover {
-            color: #007bff;
+            color: #fa06d1;
             /* Color on hover */
         }
 
@@ -194,55 +194,102 @@
             color: #f5f4f4;
             /* Example text color */
         }
+        .navbar {
+    display: flex;
+    justify-content: space-between; /* Space out brand and collapsible section */
+    align-items: center; /* Center items vertically */
+}
+
+.social-media-icons {
+    display: flex; /* Ensure icons are in a row */
+    justify-content: center; /* Center icons */
+    flex-grow: 1; /* Allow icons to grow to occupy available space */
+}
+
+@media (min-width: 992px) {
+    .collapse.navbar-collapse {
+        display: flex !important; /* Ensure the collapse section is always visible */
+    }
+    .social-media-icons {
+        margin-right: auto; /* Push icons to the center */
+        margin-left: auto; /* Push icons to the center */
+    }
+}
+
+.navbar-nav {
+    display: flex; /* Make nav items align horizontally */
+}
+
+
     </style>
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Evans Onyango</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="navbar-toggler-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Evans Ochieng</a>
+    <div class="d-flex justify-content-center w-45"></div>
+        <div class="social-media-icons d-flex">
+            <!-- Phone Icon -->
+            <a href="tel:+254794987153" class="social-icon mx-2" title="Phone">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <!-- WhatsApp Icon -->
+            <a href="https://wa.me/254794987153" target="_blank" class="social-icon mx-2" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <!-- Email Icon -->
+            <a href="mailto:evochieng44@gmail.com" class="social-icon mx-2" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-    </nav>
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar-toggler-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+    
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <!-- Hero Section -->
     <section id="home" class="hero fade-in">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Hi, I'm Evans Onyango</h2>
+            <h2>Hi, I'm Evans Ochieng</h2>
             <p>An Economics Student at the University of Nairobi, Passionate about Data Analysis and Economic Research.
             </p>
             <!-- "Learn More About Me" button -->
             <a href="#about" class="cta-btn">Learn More About Me</a>
             <!-- "Download Resume" button should be below "Learn More" -->
-            <a href="Evans_Onyango_CV(1).docx" class="cta-btn">Download Resume</a>
+            <a href="Evans_Ochieng_CV(1).docx" class="cta-btn">Download Resume</a>
         </div>
     </section>
 
@@ -251,13 +298,13 @@
     <!-- About Section -->
     <section id="about" class="about-section fade-in">
         <div class="container">
-            <h2>About Evans Onyango</h2>
-            <p>Hello! I'm Evans Onyango, an Economics student at the University of Nairobi with a passion for financial
+            <h2>About Evans Ochieng</h2>
+            <p>Hello! I'm Evans Ochieng, an Economics student at the University of Nairobi with a passion for financial
                 analysis, economic research, and data-driven decision-making. I'm committed to understanding global
                 economic trends and making impactful contributions to the field.</p>
 
             <!-- Download Resume Button -->
-            <a href="Evans_Onyango_CV.pdf" download="Evans_Onyango_Resume" class="download-btn">Download Resume</a>
+            <a href="Evans_Ochieng_CV.pdf" download="Evans_Ochieng_Resume" class="download-btn">Download Resume</a>
         </div>
     </section>
 
@@ -369,6 +416,10 @@
                 <a href="tel:+254794987153" class="social-icons" title="Phone">
                     <i class="fas fa-phone-alt"></i>
                 </a>
+                <!-- Email Icon -->
+                <a href="mailto:evochieng44@gmail.com" class="social-icons" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -376,7 +427,7 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Evans Onyango. All rights reserved.</p>
+            <p>&copy; 2024 Evans Ochieng. All rights reserved.</p>
             <div class="social-media-icons">
                 <a href="https://www.facebook.com" target="_blank" class="social-icon" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
@@ -390,12 +441,21 @@
                 <a href="tel:+254794987153" class="social-icon" title="Phone">
                     <i class="fas fa-phone-alt"></i>
                 </a>
+                <!-- WhatsApp Icon -->
+                <a href="https://wa.me/254794987153" target="_blank" class="social-icon" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- Email Icon -->
+                <a href="mailto:evochieng44@gmail.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
             <span class="created-by" style="float: right;">
                 Created by Startec Technologies <span style="color: red;">&hearts;</span>
             </span>
         </div>
     </footer>
+    
 
 
 
