@@ -12,6 +12,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Validate environment variables
+if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error('Environment variables EMAIL_USER or EMAIL_PASS are not set.');
+    process.exit(1);
+}
+
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -23,10 +29,14 @@ const transporter = nodemailer.createTransport({
     debug: true    // Show debug output
 });
 
-
 // POST route to handle email sending
 app.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
+
+    // Basic validation
+    if (!name || !email || !message) {
+        return res.status(400).send('All fields are required.');
+    }
 
     // Mail options
     const mailOptions = {
@@ -40,8 +50,8 @@ app.post('/send-email', (req, res) => {
     // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error:', error);
-            return res.status(500).send('Error sending email.');
+            console.error('Error sending email:', error);
+            return res.status(500).send('Error sending email: ' + error.message);
         }
         res.status(200).send('Email sent successfully: ' + info.response);
     });
