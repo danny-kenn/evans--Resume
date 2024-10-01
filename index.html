@@ -194,41 +194,58 @@
             color: #f5f4f4;
             /* Example text color */
         }
+
         .navbar {
-    display: flex;
-    justify-content: space-between; /* Space out brand and collapsible section */
-    align-items: center; /* Center items vertically */
-}
+            display: flex;
+            justify-content: space-between;
+            /* Space out brand and collapsible section */
+            align-items: center;
+            /* Center items vertically */
+        }
 
-.social-media-icons {
-    display: flex; /* Ensure icons are in a row */
-    justify-content: center; /* Center icons */
-    flex-grow: 1; /* Allow icons to grow to occupy available space */
-}
+        .social-media-icons {
+            display: flex;
+            /* Ensure icons are in a row */
+            justify-content: center;
+            /* Center icons */
+            flex-grow: 1;
+            /* Allow icons to grow to occupy available space */
+        }
 
-@media (min-width: 992px) {
-    .collapse.navbar-collapse {
-        display: flex !important; /* Ensure the collapse section is always visible */
-    }
-    .social-media-icons {
-        margin-right: auto; /* Push icons to the center */
-        margin-left: auto; /* Push icons to the center */
-    }
-}
+        @media (min-width: 992px) {
+            .collapse.navbar-collapse {
+                display: flex !important;
+                /* Ensure the collapse section is always visible */
+            }
 
-.navbar-nav {
-    display: flex; /* Make nav items align horizontally */
-}
-.social-iconics {
-    font-size: 18px; /* Change this value to make icons smaller or larger */
-}
+            .social-media-icons {
+                margin-right: auto;
+                /* Push icons to the center */
+                margin-left: auto;
+                /* Push icons to the center */
+            }
+        }
 
-@media (max-width: 768px) { /* Adjust for mobile view if needed */
-    .social-icon {
-        font-size: 16px; /* Smaller size for mobile, if desired */
-    }
-}
-.social-iconics {
+        .navbar-nav {
+            display: flex;
+            /* Make nav items align horizontally */
+        }
+
+        .social-iconics {
+            font-size: 18px;
+            /* Change this value to make icons smaller or larger */
+        }
+
+        @media (max-width: 768px) {
+
+            /* Adjust for mobile view if needed */
+            .social-icon {
+                font-size: 16px;
+                /* Smaller size for mobile, if desired */
+            }
+        }
+
+        .social-iconics {
             font-size: 20px;
             /* Icon size */
             color: #f5f5f5;
@@ -240,18 +257,15 @@
             color: #fa06d1;
             /* Color on hover */
         }
-
-
-
     </style>
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">Evans Ochieng</a>
-    <div class="d-flex justify-content-center w-0"></div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Evans Ochieng</a>
+        <div class="d-flex justify-content-center w-0"></div>
         <div class="social-media-icons d-flex">
             <!-- Phone Icon -->
             <a href="tel:+254794987153" class="social-iconics mx-2" title="Phone">
@@ -266,38 +280,38 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-    </div>
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="navbar-toggler-icon">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
-    </button>
-    
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-toggler-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
     <!-- Hero Section -->
@@ -477,7 +491,7 @@
             </span>
         </div>
     </footer>
-    
+
 
 
 
