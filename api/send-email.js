@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
     // Mail options
     const mailOptions = {
-        from: process.env.EMAIL_USER, // Sender address (your email)
+        from: 'EVANS_CV' , // Sender address (your email)
         to: 'evochieng44@gmail.com', // Recipient email
         subject: `Message from ${name} (${email})`, // Include sender's name and email
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`, // Plain text version
